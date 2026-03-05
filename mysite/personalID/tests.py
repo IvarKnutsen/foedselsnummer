@@ -1,5 +1,6 @@
-from django.test import TestCase, Client
+from django.test import TestCase, Client, override_settings
 
+@override_settings(SECURE_SSL_REDIRECT=False)
 class PersonalIDViewTest(TestCase):
     def setUp(self):
         self.client = Client()
