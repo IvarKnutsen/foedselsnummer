@@ -1,6 +1,7 @@
 from django.shortcuts import render
 from django.http import HttpResponse
+from foedselsnummer import generateFNr
 
-# Create your views here.
 def index(request):
-    return HttpResponse("Hello, world. You're at the personalID index.")
+    fnr = generateFNr(None, None, None)
+    return HttpResponse(f"Generated Norwegian national ID: {fnr}")
