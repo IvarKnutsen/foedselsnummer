@@ -6,7 +6,7 @@ from django.http import HttpResponse
 class RateLimitMiddleware:
     """Allow at most LIMIT requests per WINDOW seconds per IP for rate-limited paths."""
 
-    LIMIT = 60
+    LIMIT = 10
     WINDOW = 60  # seconds
     PATHS = {"/personalID/"}
 
