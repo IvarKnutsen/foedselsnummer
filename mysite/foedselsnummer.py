@@ -7,15 +7,15 @@ def generateFNr(day,month,year):
     if day == None:
         day = str(random.randrange(1,31)).rjust(2,"0")
     else:
-        day = str(day)
+        day = str(day).rjust(2,"0")
     if month == None:
         month = str(random.randrange(1,12)).rjust(2,"0")
     else:
-        month = str(month)
+        month = str(month).rjust(2,"0")
     if year == None:
         year = str(random.randrange(00,99)).rjust(2,"0")
     else:
-        year = str(year)
+        year = str(year).rjust(2,"0")
     
     # Generate random "individual number". Does not take birth year into account (yet).
     #TODO take birth year into account.
